@@ -1557,23 +1557,32 @@ footer {
 	}
 
 	.steps {
-		flex-direction: column;
-		align-items: center;
+		overflow-x: scroll;
+	}
+
+	#steps .wrapper {
+		position: relative;
+	}
+
+	#steps .wrapper:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 70px;
+		right: 15px;
+		width: 44px;
+		height: calc(100% - 70px);
+		background: linear-gradient(270deg, rgba(255, 255, 255, 1) 35%, rgb(255 255 255 / 0%));
+	}
+
+	.steps::-webkit-scrollbar {
+		display: none;
 	}
 
 	.step {
-		margin-bottom: 100px;
-	}
-
-	.step:last-child {
-		margin-bottom: 0;
-	}
-
-	.step:after {
-		top: auto;
-		bottom: -60px;
-		left: calc(50% - 23px);
-		transform: rotate(90deg);
+		width: 200px;
+		min-width: 200px;
+		margin-right: 40px;
 	}
 
 	#priem .wrapper {
