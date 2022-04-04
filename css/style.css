@@ -1558,6 +1558,7 @@ footer {
 
 	.steps {
 		overflow-x: scroll;
+		overflow-y: hidden;
 	}
 
 	#steps .wrapper {
